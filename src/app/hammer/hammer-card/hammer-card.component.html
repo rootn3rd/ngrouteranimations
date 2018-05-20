@@ -1,0 +1,14 @@
+<mat-card class="hammer-card" [@cardAnimator]="animationState" (@cardAnimator.done)="resetAnimationState()" (swipeleft)="startAnimation('slideOutLeft')"
+  (swiperight)="startAnimation('zoomOutRight')" (swipeup)="startAnimation('rotateOutUpRight')" (swipedown)="startAnimation('flipOutY')">
+
+  <mat-card-content>
+    <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="" mat-card-image>
+    <p>This is a super cool demo!</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (tap)="startAnimation('wobble')">WOBBLE</button>
+    <button mat-raised-button (tap)="startAnimation('swing')">SWING</button>
+    <button mat-raised-button description="Double Tap me!" appHammertime (doubleTap)="startAnimation('swing')">SWING</button>
+    <button mat-raised-button description="Triple Tap me!" appHammertime (tripleTap)="startAnimation('jello')">JELLO</button>
+  </mat-card-actions>
+</mat-card>

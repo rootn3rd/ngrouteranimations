@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div class="list-container" [@listAnimation]="items.length">
+
+    <button class="btn btn-primary" (click)="pushItem()">Add Item</button>
+    <button class="btn btn-primary" (click)="removeItem()">Remove Item</button>
+
+    <div id="list" *ngFor="let item of items">
+      {{item}}
+    </div>
+  </div>
+
+  <div class="row mt-5" @explainer>
+    <div class="col">
+      <p class="message">I think this is something that can be reused.</p>
+    </div>
+    <div class="col">
+      <p class="message">I think this is something that can be reused.</p>
+    </div>
+    <div class="col">
+      <p class="message">I think this is something that can be reused.</p>
+    </div>
+  </div>
+</div>
